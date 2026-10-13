@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lyrflow"
+version = "0.1.0"
+description = "Multilingual lyrics processing and vocal practice analytics"
+requires-python = ">=3.11"
+dependencies = ["Flask", "lyricsgenius", "openai", "python-dotenv", "hangul-romanize", "pykakasi", "pypinyin", "Unidecode", "typing-extensions"]
+
+[project.optional-dependencies]
+translation-fallback = ["deep-translator==1.11.4"]
+test = ["pytest"]
+
+[project.scripts]
+lyrflow = "lyrflow.main:main"
+
+[tool.setuptools.packages.find]
+include = ["lyrflow*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

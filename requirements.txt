@@ -1,0 +1,10 @@
+# Inferred direct runtime imports; not a resolved/verified lock.
+Flask
+lyricsgenius
+openai
+python-dotenv
+hangul-romanize
+pykakasi
+pypinyin
+Unidecode
+typing-extensions
